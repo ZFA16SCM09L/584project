@@ -47,9 +47,18 @@ for i in range(0,len(content)-1):
 	var7.append(line[7])
 	var8.append(line[8])
 	var9.append(line[9])
-
-mean2 = np.var(sum3)
-print(mean2)
+print(data[0])
+for i in data:
+	i[0] = (i[0]-np.mean(sum1))/np.var(var1)
+	i[1] = (i[1]-np.mean(sum2))/np.var(var2)
+	i[2] = (i[2]-np.mean(sum3))/np.var(var3)
+	i[3] = (i[3]-np.mean(sum4))/np.var(var4)
+	i[4] = (i[4]-np.mean(sum5))/np.var(var5)
+	i[5] = (i[5]-np.mean(sum6))/np.var(var6)
+	i[6] = (i[6]-np.mean(sum7))/np.var(var7)
+	i[7] = (i[7]-np.mean(sum8))/np.var(var8)
+	i[8] = (i[8]-np.mean(sum9))/np.var(var9)
+print(data[0])
 """
 from sklearn.linear_model import LogisticRegression
 clf = LogisticRegression(penalty = 'l1')

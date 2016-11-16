@@ -16,16 +16,7 @@ from sklearn.preprocessing import scale
 data = scale(data,copy = 'False')
 
 from sklearn.linear_model import LogisticRegression
-clf = LogisticRegression(penalty = 'l1',random_state = 0)
-#penalty,fit_intercept,solver
-clf = clf.fit(data,label)
-
 from sklearn.model_selection import cross_val_score
-out = cross_val_score(clf,data,label,cv = 10,scoring = "accuracy")
-
-clf = LogisticRegression(penalty = 'l2',random_state = 0)
-clf = clf.fit(data,label)
-out = cross_val_score(clf,data,label,cv = 10,scoring = "accuracy")
 
 def l2(x,y):
 	clf = LogisticRegression(penalty = 'l2',random_state = 0, solver = x, fit_intercept = y)

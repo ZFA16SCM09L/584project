@@ -16,6 +16,9 @@ from sklearn.preprocessing import scale
 data = scale(data,copy = 'False')
 
 from sklearn import tree
-clf = tree.DecisionTreeClassifier()
+clf = tree.DecisionTreeClassifier() #criterion,max_depth,min_weight_fraction_leaf
 clf = clf.fit(data,label)
-tree.export_graphviz(clf,out_file='tree.dot') 
+#tree.export_graphviz(clf,out_file='tree.dot') 
+from sklearn.model_selection import cross_val_score
+out = cross_val_score(clf,data,label,cv = 10,scoring = "accuracy")
+print(out.mean())

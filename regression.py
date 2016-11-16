@@ -59,4 +59,7 @@ print(out.mean())
 print ("other combine:")
 for i in list3:
 	l1(i)
-#print("weight of every feature for l2 penalty: ",clf.coef_[0])
+
+clf = LogisticRegression(penalty = 'l2',random_state = 0)
+clf = clf.fit(data,label)
+print("weight of every feature in model with best accu: ",clf.coef_[0])

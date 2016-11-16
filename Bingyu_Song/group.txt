@@ -1,0 +1,19 @@
+The functions of 'load data' and 'scale and print the data shape' and 'Performance of baselines' from:
+	
+		Bingyu Song
+
+
+The functions of 'decision tree model' from:
+		
+		Xin Liu
+
+
+The functions of 'logistic regression' and 'Important features' from:
+
+		Zhipeng Liu
+
+
+The whole python notebook edit by 
+
+		Xin Liu, Bingyu Song , Zhipeng Liu
+
